@@ -1,7 +1,5 @@
 # TODO
 
-- [ ] wirte test to check the instance of the class
-- [ ] wirte equals method
 - [ ] Write test for generateTag method
 - [ ] wirte generateTag method
 - [ ] Write test for generatePage function
@@ -11,6 +9,8 @@
 <br>
 
 # DONE
+- [x] wirte equals method
+- [x] wirte test to check the instance of the class
 - [x] Create a class, Tag
 - [x] Create styles.css
 - [x] Create sample.html

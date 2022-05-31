@@ -5,6 +5,12 @@ class Tag {
     this.attributes = attributes;
   }
 
+  equals(anotherTag) {
+    return anotherTag instanceof Tag &&
+      this.tag === anotherTag.tag &&
+      this.content === anotherTag.content &&
+      this.attributes === anotherTag.attributes;
+  }
 }
 
 exports.Tag = Tag;
