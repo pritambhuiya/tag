@@ -1,5 +1,5 @@
 class Tag {
-  constructor({ tag, content, attributes = '' }) {
+  constructor({ tag, content, attributes }) {
     this.tag = tag;
     this.content = content;
     this.attributes = attributes;
@@ -12,14 +12,13 @@ class Tag {
       this.attributes === anotherTag.attributes;
   }
 
-  generateTag() {
-    const content = this.getContent();
-    return `<${this.tag}${this.attributes}>${content}</${this.tag}>`;
+  toHtml() {
+    const content = this.content || '';
+    const attributes = this.attributes || '';
+
+    return `<${this.tag}${attributes}>${content}</${this.tag}>`;
   }
 
-  getContent() {
-    return this.content ? this.content : '';
-  }
 }
 
 exports.Tag = Tag;

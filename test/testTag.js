@@ -23,26 +23,14 @@ describe('Tag', () => {
   });
 });
 
-describe('generateTag', () => {
+describe('toHtml', () => {
   it('Should generate a tag with content', () => {
     const head = new Tag({ tag: 'head', content: 'content' });
-    assert.strictEqual(head.generateTag(), '<head>content</head>');
+    assert.strictEqual(head.toHtml(), '<head>content</head>');
   });
 
   it('Should generate a tag without content', () => {
     const head = new Tag({ tag: 'head', content: '' });
-    assert.strictEqual(head.generateTag(), '<head></head>');
-  });
-});
-
-describe('getContent', () => {
-  it('Should return the content if content is given', () => {
-    const head = new Tag({ tag: 'head', content: 'content' });
-    assert.strictEqual(head.getContent(), 'content');
-  });
-
-  it('Should generate a tag without content', () => {
-    const head = new Tag({ tag: 'head' });
-    assert.strictEqual(head.getContent(), '');
+    assert.strictEqual(head.toHtml(), '<head></head>');
   });
 });
