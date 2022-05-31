@@ -13,7 +13,12 @@ class Tag {
   }
 
   generateTag() {
-    return `<${this.tag}${this.attributes}>${this.content}</${this.tag}>`;
+    const content = this.getContent();
+    return `<${this.tag}${this.attributes}>${content}</${this.tag}>`;
+  }
+
+  getContent() {
+    return this.content ? this.content : '';
   }
 }
 

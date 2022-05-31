@@ -34,3 +34,15 @@ describe('generateTag', () => {
     assert.strictEqual(head.generateTag(), '<head></head>');
   });
 });
+
+describe('getContent', () => {
+  it('Should return the content if content is given', () => {
+    const head = new Tag({ tag: 'head', content: 'content' });
+    assert.strictEqual(head.getContent(), 'content');
+  });
+
+  it('Should generate a tag without content', () => {
+    const head = new Tag({ tag: 'head' });
+    assert.strictEqual(head.getContent(), '');
+  });
+});
