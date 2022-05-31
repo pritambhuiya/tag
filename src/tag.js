@@ -11,6 +11,10 @@ class Tag {
       this.content === anotherTag.content &&
       this.attributes === anotherTag.attributes;
   }
+
+  generateTag() {
+    return `<${this.tag}${this.attributes}>${this.content}</${this.tag}>`;
+  }
 }
 
 exports.Tag = Tag;
